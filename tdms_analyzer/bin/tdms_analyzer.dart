@@ -28,9 +28,23 @@ void main(List<String> arguments) {
 // maps
 void prac() {
   Map<String, double> warehouseZones = {
-    'North Wing' : 26.5,
-    'South Wing' : 29.1,
-    'Loading Wing':  30.2,
-    'Strong A' : 27.8
+    'North Wing': 26.5,
+    'South Wing': 29.1,
+    'Loading Wing': 30.2,
+    'Strong A': 27.8,
   };
+
+  double maxTempRoom = 0.0;
+  String hottestWing = '';
+
+  // loop to find the maximum temperature using forEach
+
+  warehouseZones.forEach((zoneName, temperatureValue) {
+    if (temperatureValue > maxTempRoom) {
+      maxTempRoom = temperatureValue;
+      hottestWing = zoneName;
+    }
+  });
+
+  print("ALERT: maximum zone is $hottestWing at $maxTempRoom ");
 }
