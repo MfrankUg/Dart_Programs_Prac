@@ -12,9 +12,9 @@ void main(List<String> arguments) {
 
   double maxHumidity = humidityLevels[0];
 
-  for (double Humid in humidityLevels) {
-    if (maxHumidity > Humid) {
-      maxHumidity = Humid;
+  for (double humid in humidityLevels) {
+    if (maxHumidity > humid) {
+      maxHumidity = humid;
     }
   }
 
