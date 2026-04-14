@@ -1,5 +1,5 @@
 import 'package:tdms_analyzer/tdms_analyzer.dart' as tdms_analyzer;
-
+// finding the maximum values
 void main(List<String> arguments) {
   List<double> temperatures = [26.5, 29.1, 27.8, 30.2, 28.5];
   List<double> humidityLevels = [-1, -2, -4, -0.5];
