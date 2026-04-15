@@ -21,10 +21,12 @@ void main(List<String> arguments) {
   int maxDust = 0;
   String dustiestZone = '';
 
-for (WarehouseSensor currentDust in mySensor) {
-  
-}
+  for (WarehouseSensor currentDust in mySensor) {
+    if (currentDust.dustLevel > maxDust) {
+      maxDust = currentDust.dustLevel;
+      dustiestZone = currentDust.zoneName;
+    }
+  }
 
-
- 
+  print("ALERT: maximum zone is $dustiestZone at $maxDust");
 }
