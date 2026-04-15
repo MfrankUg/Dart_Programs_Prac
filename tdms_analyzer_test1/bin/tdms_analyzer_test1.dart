@@ -13,10 +13,18 @@ class WarehouseSensor {
 void main(List<String> arguments) {
   List<WarehouseSensor> mySensor = [
     WarehouseSensor("North Wing", 26.5, 450),
-    WarehouseSensor("South Wing", 29.1 , 800),
+    WarehouseSensor("South Wing", 29.1, 800),
     WarehouseSensor('Loading Dock', 30.2, 550),
-    WarehouseSensor('Storage A', 27.8, 300)
-
+    WarehouseSensor('Storage A', 27.8, 300),
   ];
 
+  int maxDust = 0;
+  String dustiestZone = '';
+
+for (WarehouseSensor currentDust in mySensor) {
+  
+}
+
+
+ 
 }
