@@ -1,5 +1,3 @@
-
-
 class WarehouseSensor {
   String zoneName;
   double temperature;
@@ -19,6 +17,6 @@ class WarehouseSensor {
 void main(List<String> arguments) {
   WarehouseSensor northSensor = WarehouseSensor("North Wing", 26.5, 450);
   WarehouseSensor dockSensor = WarehouseSensor("Loading Dock", 31.0, 600);
-
-
+  northSensor.diagnose();
+  dockSensor.diagnose();
 }
