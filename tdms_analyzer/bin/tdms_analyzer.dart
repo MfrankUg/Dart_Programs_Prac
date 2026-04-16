@@ -1,4 +1,3 @@
-import 'package:tdms_analyzer/tdms_analyzer.dart' as tdms_analyzer;
 
 // finding the maximum values using for loops
 void main(List<String> arguments) {
