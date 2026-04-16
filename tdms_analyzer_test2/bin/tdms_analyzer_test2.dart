@@ -18,5 +18,9 @@ class WarehouseSensor {
 }
 
 void main(List<String> arguments) {
+  WarehouseSensor northSensor = WarehouseSensor("North Wing", 26.5, 450);
+  WarehouseSensor dockSensor = WarehouseSensor("Loading Dock", 31.0, 600);
   print('Hello world: ${tdms_analyzer_test2.calculate()}!');
+
+  
 }
