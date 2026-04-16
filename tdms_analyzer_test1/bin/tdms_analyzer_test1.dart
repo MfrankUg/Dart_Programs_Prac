@@ -1,5 +1,3 @@
-import 'package:tdms_analyzer_test1/tdms_analyzer_test1.dart'
-    as tdms_analyzer_test1;
 
 class WarehouseSensor {
   String zoneName;
