@@ -1,3 +1,4 @@
+// Teaching the Sensor to Speak
 class WarehouseSensor {
   String zoneName;
   double temperature;
