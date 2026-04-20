@@ -2,33 +2,40 @@ class WarehouseSensor {
   String zoneName;
   double temperature;
   int dustLevel;
+
   WarehouseSensor(this.zoneName, this.temperature, this.dustLevel);
 
   void diagnose() {
     print("Running diagnostics for $zoneName...");
     if (temperature > 30 || dustLevel > 500) {
-      print(" WARNING: Conditions are critical!");
+      print(" -> ❌ WARNING: Conditions are critical!");
     } else {
-      print(" Status Normal.");
+      print(" -> ✅ Status Normal.");
     }
+    print("-------------------------");
   }
 
   void updateTemperature(double newTemp) {
     temperature = newTemp;
-    print("this is the new temperature of $newTemp");
+    print("Update: The new temperature is $newTemp°C");
   }
 }
 
+// Step 1: Add 'async' to the main function signature
+void main() async {
+  // Step 2: The Initial Ping
+  print("Connecting to ESP32 North Wing...");
 
-void main(List<String> arguments) {
-  WarehouseSensor northSensor = WarehouseSensor("North Wing", 26.5, 450);
+  // Step 3 & 4: The Pause Button and the Timer
+  await Future.delayed(Duration(seconds: 3));
+
+  // Step 5: The Execution
+  print("Connection established! Downloading data...\n");
+
+  // Bonus Challenge: Using 'final' to lock the variable
+  final northSensor = WarehouseSensor("North Wing", 26.5, 450);
   
-  // 1. Initial check (Should be Normal)
-  northSensor.diagnose(); 
-
-  // 2. The Heat Spike!
-  northSensor.updateTemperature(45.0); 
-
-  // 3. The Follow-up check (Should trigger the CODE RED)
-  northSensor.diagnose(); 
+  northSensor.diagnose();
+  northSensor.updateTemperature(45.0);
+  northSensor.diagnose();
 }
