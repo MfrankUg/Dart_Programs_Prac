@@ -8,9 +8,9 @@ class WarehouseSensor {
   void diagnose() {
     print("Running diagnostics for $zoneName...");
     if (temperature > 30 || dustLevel > 500) {
-      print(" -> ❌ WARNING: Conditions are critical!");
+      print(" ->  WARNING: Conditions are critical!");
     } else {
-      print(" -> ✅ Status Normal.");
+      print(" ->  Status Normal.");
     }
     print("-------------------------");
   }
